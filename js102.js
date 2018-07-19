@@ -79,3 +79,17 @@ var printBanner = function (message) {
 };
 
 printBanner("Hi There")
+
+// Factor a number 
+
+var factor = function(number) {
+    var factors = [];
+    for (var i = 1; i < number; i++) {
+        if (number % i === 0) {
+            factors.push(i);
+        };
+    };
+    console.log(factors);
+};
+
+factor(12);

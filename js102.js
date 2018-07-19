@@ -45,11 +45,11 @@ var printSquare = function (num) {
 //   printBox(5, 4)
 
 
-// Secon attempt: 
+// Second attempt: 
 var printBox = function (width, height) {
   for (var x = 0; x < width; x++) {
     var star = "";
-    for (var j = 0; j < height; 1) {
+    for (var j = 0; j < height; j++) {
             if (x === 0 || x === width - 1) {
                 star += "*";
             } else if (j === 0 || j === height - 1) { 
@@ -57,8 +57,25 @@ var printBox = function (width, height) {
             } else {
                 star += " ";
             };
-    console.log(star);
     };
+    console.log(star);
   };
 };
 printBox(5, 4)
+
+// Print a banner
+var printBanner = function (message) {
+    var box = "";
+    for (var j = 0; j < 3; j++) {
+        if (j === 0 || j === 2) {
+            for (var i = 0; i < message.length + 4; i++){
+                box += "*";
+            };
+        } else {
+            box += `\n* ${message} * \n`;
+        };
+    };
+  console.log(box)
+};
+
+printBanner("Hi There")

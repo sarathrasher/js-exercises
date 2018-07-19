@@ -1,13 +1,13 @@
-function hello(name) {
-    console.log("Hello, " + name + "!");
+var hello = function hello(name) {
+    console.log(`Hello, ${name}!`);
 };
 hello("Mustache");
 
-function hello(name) {
+var hello2 = function hello(name) {
     if (name == null) {
         console.log("Hello, world!");
     } else {
-        console.log("Hello, " + name + "!");
+        console.log(`Hello, ${name} !`);
     }
 };
 

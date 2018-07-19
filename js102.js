@@ -8,7 +8,15 @@ var printNumbers = function (start, end) {
 printNumbers(1, 10);
 
 var printSquare = function (num) {
-    for (var i = 1; i <= num, i++) {
-        console.log("*" * num);
+  
+    for (var y = 1; y <= num; y++) {
+      var row = ""
+        for (var x = 1; x <= num; x++) {
+          row += "*";
+        };
+      console.log(row);
     };
-};
+  };
+  
+  printSquare(5)
+

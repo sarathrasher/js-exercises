@@ -19,3 +19,21 @@ function madlib(name, subject) {
 }
 
 console.log(madlib("Sara", "math"));
+
+function totalAmount(bill, serviceLevel) {
+    var total = 0
+    var tipPercent = 0
+    if (serviceLevel == "good" || "Good") {
+        tipPercent += 0.20;
+    } else if (serviceLevel == "fair" || "Fair") {
+        tipPercent += 0.15;
+    } else if (serviceLevel == "bad" || "Bad") {
+        tipPercent += 0.10;
+    } else {
+        return "Please enter either 'good', 'bad', or 'fair'.";
+    }
+    total += bill + bill * tipPercent;
+    return total;
+}
+
+console.log(tipAmount(100, 'good'));

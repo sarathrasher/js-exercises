@@ -56,3 +56,22 @@ function totalAmount(bill, serviceLevel) {
 
 console.log(totalAmount(100, 'good'));
 
+function splitAmount(bill, serviceLevel, partySize) {
+    var total = 0
+    var tipPercent = 0
+    var splitAmount = 0
+    if (serviceLevel == "good" || "Good") {
+        tipPercent += 0.20;
+    } else if (serviceLevel == "fair" || "Fair") {
+        tipPercent += 0.15;
+    } else if (serviceLevel == "bad" || "Bad") {
+        tipPercent += 0.10;
+    } else {
+        return "Please enter either 'good', 'bad', or 'fair'.";
+    }
+    total += bill + bill * tipPercent;
+    splitAmount += total / partySize;
+    return splitAmount;
+}
+
+console.log(splitAmount(100, "good", 5));

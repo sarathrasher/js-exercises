@@ -1,6 +1,6 @@
 function hello(name) {
     console.log("Hello, " + name + "!");
-}
+};
 hello("Mustache");
 
 function hello(name) {
@@ -9,19 +9,19 @@ function hello(name) {
     } else {
         console.log("Hello, " + name + "!");
     }
-}
+};
 
 hello();
 
-function madlib(name, subject) {
+var madlibfunction madlib(name, subject) {
     var string = name + "'s favorite subject is " + subject + ".";
     return string;
-}
+};
 
 console.log(madlib("Sara", "math"));
 
-function tipAmount(bill, serviceLevel) {
-    var tipAmount = 0
+var tipCalc1 = function tipAmount(bill, serviceLevel) {
+    var tipTotal = 0
     var tipPercent = 0
     if (serviceLevel == "good" || "Good") {
         tipPercent += 0.20;
@@ -32,46 +32,63 @@ function tipAmount(bill, serviceLevel) {
     } else {
         return "Please enter either 'good', 'bad', or 'fair'.";
     }
-    tipAmount += bill * tipPercent;
-    return tipAmount;
-}
+    tipTotal += bill * tipPercent;
+    return tipTotal;
+};
 
-console.log(tipAmount(100, 'good'));
+// tipCalc2 original:
 
-function totalAmount(bill, serviceLevel) {
-    var total = 0
-    var tipPercent = 0
-    if (serviceLevel == "good" || "Good") {
-        tipPercent += 0.20;
-    } else if (serviceLevel == "fair" || "Fair") {
-        tipPercent += 0.15;
-    } else if (serviceLevel == "bad" || "Bad") {
-        tipPercent += 0.10;
-    } else {
-        return "Please enter either 'good', 'bad', or 'fair'.";
-    }
-    total += bill + bill * tipPercent;
+// var tipCalc2 = function totalAmount(bill, serviceLevel) {
+//     var total = 0
+//     var tipPercent = 0
+//     if (serviceLevel == "good" || "Good") {
+//         tipPercent += 0.20;
+//     } else if (serviceLevel == "fair" || "Fair") {
+//         tipPercent += 0.15;
+//     } else if (serviceLevel == "bad" || "Bad") {
+//         tipPercent += 0.10;
+//     } else {
+//         return "Please enter either 'good', 'bad', or 'fair'.";
+//     }
+//     total += bill + bill * tipPercent;
+//     return total;
+// };
+
+
+// tipCalc3 original:
+
+// var tipCalc3 = function splitAmount(bill, serviceLevel, partySize) {
+//     var total = 0
+//     var tipPercent = 0
+//     var splitAmount = 0
+//     if (serviceLevel == "good" || "Good") {
+//         tipPercent += 0.20;
+//     } else if (serviceLevel == "fair" || "Fair") {
+//         tipPercent += 0.15;
+//     } else if (serviceLevel == "bad" || "Bad") {
+//         tipPercent += 0.10;
+//     } else {
+//         return "Please enter either 'good', 'bad', or 'fair'.";
+//     }
+//     total += bill + bill * tipPercent;
+//     splitAmount += total / partySize;
+//     return splitAmount;
+// };
+
+
+// Tip Calcultor 2 rework
+
+var tipCalc2 = function totalAmount(bill, serviceLevel) {
+    var tipTotal = tipAmount(bill, serviceLevel);
+    var total = bill + tipTotal;
     return total;
-}
+};
+   
+// tipCalc3 rework 
 
-console.log(totalAmount(100, 'good'));
+var tipCalc3 = function splitAmount(bill, serviceLevel, partySize) {
+    var total = totalAmount(bill, serviceLevel);
+    var splitTotal = total / partySize;
+};
 
-function splitAmount(bill, serviceLevel, partySize) {
-    var total = 0
-    var tipPercent = 0
-    var splitAmount = 0
-    if (serviceLevel == "good" || "Good") {
-        tipPercent += 0.20;
-    } else if (serviceLevel == "fair" || "Fair") {
-        tipPercent += 0.15;
-    } else if (serviceLevel == "bad" || "Bad") {
-        tipPercent += 0.10;
-    } else {
-        return "Please enter either 'good', 'bad', or 'fair'.";
-    }
-    total += bill + bill * tipPercent;
-    splitAmount += total / partySize;
-    return splitAmount;
-}
-
-console.log(splitAmount(100, "good", 5));
+console.log(splitAmount(100, 'good', 5));

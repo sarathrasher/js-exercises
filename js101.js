@@ -4,7 +4,7 @@ var hello = function hello(name) {
 hello("Mustache");
 
 var hello2 = function hello(name) {
-    if (name == null) {
+    if (name ==== null) {
         console.log("Hello, world!");
     } else {
         console.log(`Hello, ${name} !`);
@@ -23,11 +23,11 @@ console.log(madlib("Sara", "math"));
 var tipCalc1 = function tipAmount(bill, serviceLevel) {
     var tipTotal = 0
     var tipPercent = 0
-    if (serviceLevel == "good" || "Good") {
+    if (serviceLevel === "good" || "Good") {
         tipPercent += 0.20;
-    } else if (serviceLevel == "fair" || "Fair") {
+    } else if (serviceLevel === "fair" || "Fair") {
         tipPercent += 0.15;
-    } else if (serviceLevel == "bad" || "Bad") {
+    } else if (serviceLevel === "bad" || "Bad") {
         tipPercent += 0.10;
     } else {
         return "Please enter either 'good', 'bad', or 'fair'.";

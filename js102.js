@@ -216,4 +216,17 @@ var longVowels = function longVowels(string) {
 
 console.log(longVowels(string));
 
-    
+
+// Sum the numbers
+
+var sumNumbers = function sumNumbers(numArray) {
+    sum = 0
+    for (i = 0; i < numArray.length; i++) {
+        sum += numArray[i];
+    }
+    return sum;
+};
+   
+numbers = [1, 4, 8]
+
+console.log(sumNumbers(numbers));

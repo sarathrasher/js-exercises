@@ -194,3 +194,26 @@ var leetSpeak = function leetSpeak(string) {
 };
     
 console.log(leetSpeak("Leet"));
+
+// Long Long Vowels
+
+var vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u']
+var string = "booleans rock socks"
+var newString = ''
+
+var longVowels = function longVowels(string) {
+    for (i = 0; i < string.length; i++) {
+        if (string[i] === string[i - 1]) {
+            for (j = 0; j < 4; j++) {
+                newString += string[i];
+            } 
+        } else {
+            newString += string[i];
+        }
+    }
+    return newString
+};
+
+console.log(longVowels(string));
+
+    

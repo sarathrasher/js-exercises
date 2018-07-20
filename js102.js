@@ -230,3 +230,19 @@ var sumNumbers = function sumNumbers(numArray) {
 numbers = [1, 4, 8]
 
 console.log(sumNumbers(numbers));
+
+// Print just positives
+
+var positiveNumbers = function positiveNumbers(numArray) {
+    posArray = []
+    for (i = 0; i < numArray.length; i++) {
+        if (numArray[i] > 0) {
+            posArray.push(numArray[i]);
+        }
+    }
+    return posArray;
+}
+
+numbers = [1, -3, 5, -3, 0]
+
+console.log(positiveNumbers(numbers));

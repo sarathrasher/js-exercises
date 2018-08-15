@@ -8,14 +8,13 @@ var printNumbers = function printNumbers(start, end) {
 printNumbers(1, 10);
 
 var printSquare = function printSquare(num) {
-  
     for (var y = 1; y <= num; y++) {
-      var row = ""
+        var row = ""
         for (var x = 1; x <= num; x++) {
           row += "*";
-        };
-    console.log(row);
-    };
+        }
+        console.log(row);
+    }
   };
   
   printSquare(5)
@@ -65,17 +64,17 @@ printBox(5, 4)
 
 // Print a banner
 var printBanner = function printBanner(message) {
-    var box = "";
     for (var j = 0; j < 3; j++) {
+        var row = "";
         if (j === 0 || j === 2) {
             for (var i = 0; i < message.length + 4; i++){
-                box += "*";
+                row += "*";
             };
         } else {
-            box += `\n* ${message} * \n`;
-        };
-    };
-  console.log(box)
+            row += `* ${message} *`;
+        }
+        console.log(row)
+    }
 };
 
 printBanner("Hi There")
@@ -87,12 +86,12 @@ var factor = function factor(number) {
     for (var i = 1; i < number; i++) {
         if (number % i === 0) {
             factors.push(i);
-        };
-    };
-    console.log(factors);
+        }
+    }
+    return factors;
 };
 
-factor(12);
+console.log(factor(12));
 
 // Caeser Cipher
 var message = 'you must unlearn what you have learned'
@@ -104,7 +103,7 @@ var Cipher = function caesarCipher(cipherString, offset) {
     for (var i = 0; i < cipherString.length; i++) {
         var isLetter = false;
         var isUpper = false;
-        var decodeIndex = 0
+        var decodeIndex = 0;
         for (var j = 0; j < lowercase.length; j++) {
             if (cipherString[i] === lowercase[j] || cipherString[i] === uppercase[j]) {
                 isLetter = true;
@@ -201,10 +200,10 @@ var vowels = ['A', 'a', 'E', 'e', 'I', 'i', 'O', 'o', 'U', 'u']
 var string = "booleans rock socks"
 var newString = ''
 
-var longVowels = function longVowels(string) {
+var longVowels = function longVowels(string, vowelLength) {
     for (i = 0; i < string.length; i++) {
         if (string[i] === string[i - 1]) {
-            for (j = 0; j < 4; j++) {
+            for (j = 0; j < vowelLength - 1; j++) {
                 newString += string[i];
             } 
         } else {
@@ -214,7 +213,7 @@ var longVowels = function longVowels(string) {
     return newString
 };
 
-console.log(longVowels(string));
+console.log(longVowels(string, 5));
 
 
 // Sum the numbers
@@ -298,3 +297,13 @@ var multMatrix = function multMatrix(mat1, mat2) {
 };
 
 console.log(multMatrix(matrix1, matrix2));
+
+// Rock Paper Scissors
+
+var rockPaperScissors = function rockPaperScissors(input1, input2) {
+    w
+        }
+
+
+
+};

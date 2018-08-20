@@ -37,3 +37,12 @@ console.assert(matchesLink('google.com') === false, 'google.com is not a valid l
 console.assert(matchesLink('http://google') === false, 'http://google is not a valid link');
 console.assert(matchesLink('htt:/google.com') === false, 'htt://google.com is not a valid link');
 console.assert(matchesLink('http:/google.com') === false, 'http:/google.com is not a valid link.');
+
+// Episode Lists
+
+let matchesEpisode = (html) => {
+const episodeExpression = /<tr class="vevent" style="text-align:center;background:inherit"><th scope="row" [^<]+<\/th><td>[^<]+<\/td><td class="summary" style="text-align:left">"([^"]+)"<\/td><td><b>[^<]+<\/b>,[^<]+<\/td><td>(<a href="[^"]+" title="[^"]+">)?[^<]+(<\/a>)?<\/td><td>([^<]+)/
+
+return link.match(episodeExpression);
+
+matchesEpisode()
